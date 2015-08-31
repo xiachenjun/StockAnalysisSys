@@ -1,4 +1,4 @@
-package com.xia.test;
+package com.xia.test.dao;
 
 public class Welcome {
 
