@@ -21,5 +21,10 @@ public class PersonStockService implements IPersonStockService {
 		this.pss = pss;
 	}
 
+	@Override
+	public void updateIndustry(PersonStock ps) {
+		pss.updateIndustry(ps);
+	}
+
 	
 }

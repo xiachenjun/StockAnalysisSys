@@ -6,4 +6,6 @@ import com.xia.stocksys.bean.PersonStock;
 public interface IPersonStockMapper {
 
 	void add(PersonStock ps);
+	
+	void updateIndustry(PersonStock ps);
 }

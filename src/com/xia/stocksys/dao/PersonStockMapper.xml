@@ -7,4 +7,9 @@
 		insert into stock (s_id,s_name)
 		values (#{id},#{name});
 	</insert>
+
+	<update id="updateIndustry" parameterType="PersonStock">
+		update stock s set
+		s.s_industry = ${industry} where s.s_id = ${id};
+	</update>
 </mapper>

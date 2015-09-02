@@ -1,20 +1,16 @@
 package com.xia.stocksys.bean;
 
-import java.io.Serializable;
-
 /**
- * 个股实体类
+ * 行业类
  * 
  * @author xiachenjun
  *
  */
-public class PersonStock implements Serializable {
+public class Industry {
 
 	private String id;
-
 	private String name;
-
-	private String industry;
+	private String simpleName;
 
 	public String getId() {
 		return id;
@@ -32,12 +28,12 @@ public class PersonStock implements Serializable {
 		this.name = name;
 	}
 
-	public String getIndustry() {
-		return industry;
+	public String getSimpleName() {
+		return simpleName;
 	}
 
-	public void setIndustry(String industry) {
-		this.industry = industry;
+	public void setSimpleName(String simpleName) {
+		this.simpleName = simpleName;
 	}
 
 }
