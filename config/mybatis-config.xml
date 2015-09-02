@@ -2,10 +2,16 @@
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
 <configuration>
+	<typeAliases>
+		<typeAlias alias="PersonStock" type="com.xia.stocksys.bean.PersonStock" />
+	</typeAliases>
 	<mappers>
 		<mapper class="com.xia.test.mapper.TestMapper" />
-
-		<mapper class="com.xia.test.dao.impl.TestDao" />
+		<mapper class="com.xia.stocksys.dao.IPersonStockMapper" />
+		<mapper resource="com/xia/stocksys/dao/PersonStockMapper.xml" />
 	</mappers>
+
+
 </configuration>

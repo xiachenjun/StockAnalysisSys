@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.xia.test.dao.impl.TestDao;
+import com.xia.test.mapper.TestMapper;
 
 public class TestMyBatis {
 
@@ -11,9 +12,8 @@ public class TestMyBatis {
 
 		ApplicationContext ctx = null;
 		ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		TestDao testDao = (TestDao) ctx.getBean("testDao");
-		System.out.println(testDao);
-		
+		TestMapper testDao = (TestMapper) ctx.getBean("testDao");
+		System.out.println(testDao.selectBlog(1).getName());
 
 	}
 }

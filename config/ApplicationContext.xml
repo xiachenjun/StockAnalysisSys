@@ -15,7 +15,7 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8
+			<value>jdbc:mysql://localhost:3306/stock_data?useUnicode=true&amp;characterEncoding=UTF-8
 			</value>
 			<!--springmybaitis是我的数据库 -->
 		</property>
@@ -31,7 +31,14 @@
 		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
 	</bean>
 	<bean id="testDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="com.xia.test.dao.impl.TestDao"></property>
+		<property name="mapperInterface" value="com.xia.test.mapper.TestMapper"></property>
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="personStockMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value=" com.xia.stocksys.dao.IPersonStockMapper"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="personStockService" class="com.xia.stocksys.service.impl.PersonStockService">
+		<property name="pss" ref="personStockMapper"></property>
 	</bean>
 </beans>  
